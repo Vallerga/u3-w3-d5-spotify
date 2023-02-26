@@ -15,7 +15,7 @@ const persistConfig = {
   }
 
   const rootReducer = combineReducers({
-    central: mainReducer,
+    redu: mainReducer,
   });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

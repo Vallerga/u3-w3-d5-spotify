@@ -1,18 +1,17 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Container } from "react-bootstrap";
-import CentralColumn from './components/CentralColumn';
+import Home from './components/Home';
+import SideBar from './components/SideBar';
 
 
 
 function App() {
   return (
     <BrowserRouter>
-      <Container>        
+      <SideBar/>
         <Routes>
-          <Route path="/" element={<CentralColumn />} />          
-        </Routes>
-      </Container>
+          <Route path="/" element={<Home />} />          
+        </Routes>      
     </BrowserRouter>
   );
 }

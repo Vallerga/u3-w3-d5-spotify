@@ -30,7 +30,7 @@ const initialState = {
   fetchSongs: "",
 };
 
-const mainReducer = (state = initialState, action) => {
+const redu = (state = initialState, action) => {
   switch (action.type) {
     case "SELECT_SONG":
       return {
@@ -58,8 +58,15 @@ const mainReducer = (state = initialState, action) => {
         ...state,
         arrSong: { ...state.arrSong, hiphopArr: action.payload },
       };
+    case CARD_ID:
+      return { ...state, cardId: action.payload };
+    case SPECIFIC_CARD:
+      return {
+        ...state,
+        specificCard: action.payload,
+      };
     default:
       return state;
   }
 };
-export default mainReducer;
+export default redu;

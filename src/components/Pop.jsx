@@ -5,7 +5,7 @@ import HasError from "./HasError";
 import Loading from "./Loading";
 import ProtCard from "./ProtCard";
 
-const Pop = (endPoint) => {
+const Pop = ({endPoint}) => {
   const dispatch = useDispatch();
   const hasError = useSelector((state) => state.redu.hasError);
   const isLoading = useSelector((state) => state.redu.isLoading);
@@ -13,7 +13,7 @@ const Pop = (endPoint) => {
   useEffect(() => {
     dispatch(fetchFromMusicApi(endPoint));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cards]);
+  }, []);
   return (
     <>
       {isLoading ? (
@@ -21,7 +21,7 @@ const Pop = (endPoint) => {
       ) : hasError ? (
         <HasError />
       ) : (
-        cards.map((PopSong) => (
+        cards.slice(6, 10).map((PopSong) => (
         <ProtCard key={PopSong.id} song={PopSong} />
       )))}
     </>

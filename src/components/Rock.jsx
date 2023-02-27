@@ -5,7 +5,7 @@ import HasError from "./HasError";
 import Loading from "./Loading";
 import ProtCard from "./ProtCard";
 
-const Rock = (endPoint) => {
+const Rock = ({endPoint}) => {
   const dispatch = useDispatch();
   const hasError = useSelector((state) => state.redu.hasError);
   const isLoading = useSelector((state) => state.redu.isLoading);

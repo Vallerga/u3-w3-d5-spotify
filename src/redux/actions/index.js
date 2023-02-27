@@ -13,30 +13,32 @@ export const REMOVE_FROM_FAV = "REMOVE_FROM_FAV";
 
 export const fetchFromMusicApi = (endPoint) => {
   return async (dispatch, getState) => {
+    const urlToFetch = "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + endPoint
     try {
-      let res = await fetch(
-        "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + endPoint
-      );
+      let res = await fetch(urlToFetch);
       if (res.ok) {
         let data = await res.json();
-        console.log(data)
+        console.log(data.data);
         switch (endPoint) {
           case "rock":
-            Loading();
             dispatch({
               type: ROCK,
               payload: data.data,
             });
             break;
           case "pop":
-            Loading();
+            dispatch({
+              type: IS_LOADING,
+            });
             dispatch({
               type: POP,
               payload: data.data,
             });
             break;
           case "hiphop":
-            Loading();
+            dispatch({
+              type: IS_LOADING,
+            });
             dispatch({
               type: HIPHOP,
               payload: data.data,
@@ -46,14 +48,18 @@ export const fetchFromMusicApi = (endPoint) => {
             break;
         }
       } else {
-        Loading();
+        dispatch({
+          type: IS_LOADING,
+        });
         dispatch({
           type: HAS_ERROR,
         });
       }
     } catch (error) {
       alert(error);
-      Loading();
+      dispatch({
+        type: IS_LOADING,
+      });
       dispatch({
         type: HAS_ERROR,
       });
@@ -61,7 +67,6 @@ export const fetchFromMusicApi = (endPoint) => {
   };
 };
 
-const Loading = (dispatch) =>
-  dispatch({
+const dispatchp = () => ({
     type: IS_LOADING,
-  });
+  })

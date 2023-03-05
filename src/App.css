@@ -270,3 +270,20 @@ ul {
 .mainPage img {
   width: 200px;
 }
+
+/* Album Page */
+
+.spacing{
+  padding-left: 250px!important;
+}
+
+.headerAlbum {
+  background: rgb(76, 81, 88);
+  background: linear-gradient(
+    90deg,
+    rgb(75, 116, 173) 0%,
+    rgb(58, 81, 116) 42%,
+    rgb(36, 50, 68) 100%
+  );
+  color: white;
+}

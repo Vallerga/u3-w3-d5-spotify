@@ -23,21 +23,21 @@ const MyPlayer = () => {
                 className="offset-3 offset-md-4 offset-lg-5 playerControls mt-1"
               >
                 <Row>
-                  <Link href="#">
+                  <Col><Link href="#">
                     <img src={shuffle} alt="shuffle" />
-                  </Link>
-                  <Link href="#">
+                  </Link></Col>
+                  <Col><Link href="#">
                     <img src={Previus} alt="previous" />
-                  </Link>
-                  <Link href="#">
+                  </Link></Col>
+                  <Col><Link href="#">
                     <img src={Play} alt="play" />
-                  </Link>
-                  <Link href="#">
+                  </Link></Col>
+                  <Col><Link href="#">
                     <img src={Next} alt="next" />
-                  </Link>
-                  <Link href="#">
+                  </Link></Col>
+                  <Col><Link href="#">
                     <img src={Repeat} alt="repeat" />
-                  </Link>
+                  </Link></Col>
                 </Row>
               </Col>
             </Row>
@@ -47,9 +47,9 @@ const MyPlayer = () => {
                   <div
                     className="progress-bar"
                     role="progressbar"
-                    aria-voluenow="0"
+                    aria-valuenow="0"
                     aria-valuemin="0"
-                    aria-valuenax="100"
+                    aria-valuemax="100"
                   ></div>
                 </div>
               </Col>

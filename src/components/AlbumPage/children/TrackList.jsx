@@ -14,7 +14,7 @@ function TrackList({tracks}) {
         </tr>
       </thead>
       <tbody>
-        {tracks.map((track) => <TrackTableRow track={track} />)
+        {tracks.map((track, i) => <TrackTableRow key={i} track={track} />)
         }
       </tbody>
     </Table>

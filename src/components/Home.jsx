@@ -4,6 +4,7 @@ import Pop from "./Pop";
 import HipHop from "./HipHop";
 
 const Home = () => {
+  
   return (
     <>
       <Container

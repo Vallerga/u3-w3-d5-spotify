@@ -18,7 +18,6 @@ export const fetchFromMusicApi = (endPoint) => {
       let res = await fetch(urlToFetch);
       if (res.ok) {
         let data = await res.json();
-        console.log(data.data);
         switch (endPoint) {
           case "rock":
             dispatch({

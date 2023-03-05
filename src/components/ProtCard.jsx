@@ -9,7 +9,7 @@ const ProtCard = ({song}) => {
     <>
       <Col xs={4}>
         <Link
-          to={`/Album`}
+          to={`/Album/?id=${song.album.id}`}
           onClick={() => {
             dispatch({
               type: CARD_ID,

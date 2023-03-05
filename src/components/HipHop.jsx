@@ -13,7 +13,7 @@ const HipHop = ({endPoint}) => {
   useEffect(() => {
     dispatch(fetchFromMusicApi(endPoint));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    console.log(cards)
+    
   }, []);
   return (
     <>

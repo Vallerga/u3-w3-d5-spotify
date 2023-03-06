@@ -21,9 +21,6 @@ body {
 .player-icons:hover {
   scale: 1.02;
 }
-.mainPage {
-  width: calc(100vw - 360px);
-}
 
 #navbarNavAltMarkup {
   display: block !important;
@@ -159,6 +156,14 @@ ul {
 }
 
 /*MAIN PAGE SECTION*/
+Link {
+  text-decoration: none!important;
+}
+
+.artistHome:hover {
+  color:#6d6d6d!important;
+  text-decoration:underline!important;
+}
 
 .mainLinks {
   margin-top: 1.5rem!important;

@@ -6,11 +6,6 @@ import {
   POP,
   HIPHOP,
   CARD_ID,
-  SPECIFIC_CARD,
-  ALL_TRACKS,
-  PLAY_ALBUM,
-  MY_FAV_SONGS,
-  REMOVE_FROM_FAV,
 } from "../actions";
 
 const initialState = {
@@ -19,18 +14,16 @@ const initialState = {
     popArr: [],
     hiphop: [],
   },
-  specificCard: {},
   hasError: false,
   isLoading: true,
   cardId: null,
   tracks: {},
-  playAlbum: {},
   searchResult: "",
   myFavSongs: [],
   fetchSongs: "",
 };
 
-const redu = (state = initialState, action) => {
+const home = (state = initialState, action) => {
   switch (action.type) {
     case "SELECT_SONG":
       return {
@@ -59,14 +52,9 @@ const redu = (state = initialState, action) => {
         arrSong: { ...state.arrSong, hiphopArr: action.payload },
       };
     case CARD_ID:
-      return { ...state, cardId: action.payload };
-    case SPECIFIC_CARD:
-      return {
-        ...state,
-        specificCard: action.payload,
-      };
+      return { ...state, cardId: action.payload };    
     default:
       return state;
   }
 };
-export default redu;
+export default home;

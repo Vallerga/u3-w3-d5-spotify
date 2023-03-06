@@ -4,6 +4,7 @@ import Home from './components/Home';
 import SideBar from './components/SideBar';
 import MyPlayer from './components/MyPlayer';
 import AlbumPage from './components/AlbumPage';
+import ArtistPage from './components/ArtistPage';
 
 
 
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/album" element={<AlbumPage />} />
+          <Route path="/artist" element={<ArtistPage />} />
         </Routes>
       <MyPlayer />
     </BrowserRouter>

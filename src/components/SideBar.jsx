@@ -47,7 +47,7 @@ const SideBar = () => {
             <FontAwesomeIcon icon={faBookOpen} size="lg" /> Your Library
           </Nav.Link>
         </Nav>
-        <Form className="input-group ps-3 align-items-center">
+        <Form className="input-group ps-3 align-items-center z-index-2">
           <FormControl
             type="text"
             placeholder="Search"
@@ -58,7 +58,7 @@ const SideBar = () => {
 
           <Link to={"/SearchResults"}>
             <Button
-              className="align-self-stretch me-3 px-2"
+              className="align-self-stretch me-3 px-2 z-index-1"
               variant="outline-secondary"
               onClick={() =>
                 dispatch({

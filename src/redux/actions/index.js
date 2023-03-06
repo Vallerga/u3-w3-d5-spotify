@@ -6,8 +6,6 @@ export const POP = "POP";
 export const HIPHOP = "HIPHOP";
 export const CARD_ID = "CARD_ID";
 export const ALL_TRACKS = "ALL_TRACKS";
-export const SPECIFIC_CARD = "SPECIFIC_CARD";
-export const PLAY_ALBUM = "PLAY_ALBUM";
 export const MY_FAV_SONGS = "MY_FAV_SONGS";
 export const REMOVE_FROM_FAV = "REMOVE_FROM_FAV";
 
@@ -66,6 +64,6 @@ export const fetchFromMusicApi = (endPoint) => {
   };
 };
 
-const dispatchp = () => ({
+const dispatch = () => ({
     type: IS_LOADING,
   })

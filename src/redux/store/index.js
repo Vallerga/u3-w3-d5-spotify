@@ -2,7 +2,8 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { encryptTransform } from "redux-persist-transform-encrypt";
-import mainReducer from "../reducers";
+import homePage from "../reducers/homePage";
+import albumPage from "../reducers/albumPage";
 
 const persistConfig = {
     key: "root",
@@ -15,7 +16,8 @@ const persistConfig = {
   }
 
   const rootReducer = combineReducers({
-    redu: mainReducer,
+    home: homePage,
+    album: albumPage,
   });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

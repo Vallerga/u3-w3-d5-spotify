@@ -6,10 +6,11 @@ import Play from "../assets/Play.png";
 import Previus from "../assets/Previous.png";
 import Repeat from "../assets/Repeat.png";
 import Next from "../assets/Next.png";
+// import { playSong } from "../redux/actions/albumAction";
 
 const MyPlayer = () => {
-  const track = useSelector((state) => state.redu.playAlbum);
-  console.log(track);
+  const track = useSelector((state) => state.home.playAlbum);
+  // playSong(track)
   return (
     <>
       <Container fluid className="fixed-bottom bg-container pt-1 ">
@@ -23,21 +24,33 @@ const MyPlayer = () => {
                 className="offset-3 offset-md-4 offset-lg-5 playerControls mt-1"
               >
                 <Row>
-                  <Col><Link href="#">
-                    <img src={shuffle} alt="shuffle" />
-                  </Link></Col>
-                  <Col><Link href="#">
-                    <img src={Previus} alt="previous" />
-                  </Link></Col>
-                  <Col><Link href="#">
-                    <img src={Play} alt="play" />
-                  </Link></Col>
-                  <Col><Link href="#">
-                    <img src={Next} alt="next" />
-                  </Link></Col>
-                  <Col><Link href="#">
-                    <img src={Repeat} alt="repeat" />
-                  </Link></Col>
+                  <Col>
+                    <Link>
+                      <img src={shuffle} alt="shuffle" />
+                    </Link>
+                  </Col>
+                  <Col>
+                    <Link>
+                      <img src={Previus} alt="previous" />
+                    </Link>
+                  </Col>
+                  <Col>
+                    <Link 
+                    // onClick = {playSong}
+                    >
+                      <img src={Play} alt="play" />
+                    </Link>
+                  </Col>
+                  <Col>
+                    <Link>
+                      <img src={Next} alt="next" />
+                    </Link>
+                  </Col>
+                  <Col>
+                    <Link>
+                      <img src={Repeat} alt="repeat" />
+                    </Link>
+                  </Col>
                 </Row>
               </Col>
             </Row>

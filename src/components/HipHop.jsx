@@ -7,9 +7,9 @@ import ProtCard from "./ProtCard";
 
 const HipHop = ({endPoint}) => {
   const dispatch = useDispatch();
-  const hasError = useSelector((state) => state.redu.hasError);
-  const isLoading = useSelector((state) => state.redu.isLoading);
-  const cards = useSelector((state) => state.redu.arrSong.hiphopArr);
+  const hasError = useSelector((state) => state.home.hasError);
+  const isLoading = useSelector((state) => state.home.isLoading);
+  const cards = useSelector((state) => state.home.arrSong.hiphopArr);
   useEffect(() => {
     dispatch(fetchFromMusicApi(endPoint));
     // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -28,3 +28,10 @@ export const converter2 = (sec) => {
 //     console.log(`cannot play the sound file`, error);
 //   }
 // };
+
+export const addFriend = (param) => {
+  return {
+    type: LIKE_SONG,
+    payload: param,
+  };
+};

@@ -1,11 +1,11 @@
 import { SPECIFIC_CARD } from "../actions/albumAction";
 import { PLAY_ALBUM } from "../actions/albumAction";
-import { LIKE_SONG } from "../actions/albumAction"
+import { LIKE_SONG } from "../actions/albumAction";
 
 const initialState = {
   specificCard: {},
   playAlbum: {},
-  likedSong: null,
+  likedSong: [],
 };
 
 const album = (state = initialState, action) => {
@@ -21,10 +21,15 @@ const album = (state = initialState, action) => {
         playAlbum: action.payload,
       };
     case LIKE_SONG:
+      let selectedSong = action.payload;
+      let songList = [...state.likedSong];
+      if (!songList.includes(selectedSong)) {
+        songList.push(action.payload);
+      }
       return {
         ...state,
-        likedSong:[state.likedSong, action.payload]
-      }
+        likedSong: songList,
+      };
     default:
       return state;
   }

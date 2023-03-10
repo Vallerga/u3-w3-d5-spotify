@@ -17,7 +17,6 @@ const Rock = ({ endPoint }) => {
   return (
     <>
     {cards.slice(6, 10).map((rockSong) => {
-          console.log("non compaio?",rockSong);
           return (
             <>
               <ProtCard key={rockSong.id} song={rockSong} />

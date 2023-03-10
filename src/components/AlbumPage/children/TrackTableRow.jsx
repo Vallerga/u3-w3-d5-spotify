@@ -2,14 +2,14 @@ import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import {
   converter,
-  LIKE_SONG,
   PLAY_ALBUM,
 } from "../../../redux/actions/albumAction";
+import { addFriend } from "../../../redux/actions/albumAction";
 
 const TrackTableRow = ({ track, position }) => {
   let duration = converter(track.duration);
   const likedSong = useSelector((state) => state.album.likedSong);
-  console.log("likedSong", likedSong)
+  console.log("likedSong", likedSong);
 
   const dispatch = useDispatch();
   const handleClick = () => {
@@ -20,19 +20,19 @@ const TrackTableRow = ({ track, position }) => {
   };
 
   const likeSong = () => {
-    dispatch({
-      type: LIKE_SONG,
-      payload: track.id,
-    });
+    console.log("sono clickato")
+    console.log("track.id", track.id);
+    console.log("likedSong", likedSong);
+    dispatch(addFriend(track.id));
   };
 
   return (
     <tr onClick={handleClick}>
       <td>{position + 1}</td>
       <td>{track.title}</td>
-      <td>
-        {likedSong?.includes(track.id) ? (
-          <span onClick={likeSong}>
+      <td onClick={likeSong}>
+        {likedSong && likedSong?.includes(track.id) ? (
+          <span >
             <AiFillHeart />
           </span>
         ) : (

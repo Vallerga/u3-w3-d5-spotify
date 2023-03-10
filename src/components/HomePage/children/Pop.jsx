@@ -16,14 +16,9 @@ const Pop = ({endPoint}) => {
   }, []);
   return (
     <>
-      {isLoading ? (
-        <Loading />
-      ) : hasError ? (
-        <HasError />
-      ) : (
-        cards.slice(6, 10).map((PopSong) => (
+      {cards.slice(6, 10).map((PopSong) => (
         <ProtCard key={PopSong.id} song={PopSong} />
-      )))}
+      ))}
     </>
   );
 };

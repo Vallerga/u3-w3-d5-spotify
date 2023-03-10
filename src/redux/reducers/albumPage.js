@@ -5,7 +5,7 @@ import { LIKE_SONG } from "../actions/albumAction"
 const initialState = {
   specificCard: {},
   playAlbum: {},
-  likedSong: [],
+  likedSong: null,
 };
 
 const album = (state = initialState, action) => {

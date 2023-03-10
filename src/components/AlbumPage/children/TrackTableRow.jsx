@@ -9,6 +9,7 @@ import {
 const TrackTableRow = ({ track, position }) => {
   let duration = converter(track.duration);
   const likedSong = useSelector((state) => state.album.likedSong);
+  console.log("likedSong", likedSong)
 
   const dispatch = useDispatch();
   const handleClick = () => {
@@ -32,11 +33,11 @@ const TrackTableRow = ({ track, position }) => {
       <td>
         {likedSong?.includes(track.id) ? (
           <span onClick={likeSong}>
-            <AiOutlineHeart />
+            <AiFillHeart />
           </span>
         ) : (
           <span>
-            <AiFillHeart />
+            <AiOutlineHeart />
           </span>
         )}
       </td>

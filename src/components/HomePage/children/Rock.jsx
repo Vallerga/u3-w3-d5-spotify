@@ -16,12 +16,7 @@ const Rock = ({ endPoint }) => {
   }, []);
   return (
     <>
-      {isLoading ? (
-        <Loading />
-      ) : hasError ? (
-        <HasError />
-      ) : (
-        cards?.slice(6, 10).map((rockSong) => {
+    {cards.slice(6, 10).map((rockSong) => {
           console.log("non compaio?",rockSong);
           return (
             <>
@@ -29,7 +24,7 @@ const Rock = ({ endPoint }) => {
             </>
           );
         })
-      )}
+      }
     </>
   );
 };

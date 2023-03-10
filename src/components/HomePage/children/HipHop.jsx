@@ -17,14 +17,9 @@ const HipHop = ({endPoint}) => {
   }, []);
   return (
     <>
-      {isLoading ? (
-        <Loading />
-      ) : hasError ? (
-        <HasError />
-      ) : (
-        cards?.slice(6, 10).map((hipPopSong) => (
+      {cards?.slice(6, 10).map((hipPopSong) => (
         <ProtCard key={hipPopSong.id} song={hipPopSong} />
-      )))}
+      ))}
     </>
   );
 };

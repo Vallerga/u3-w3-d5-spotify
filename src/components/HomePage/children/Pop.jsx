@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchFromMusicApi } from "../redux/actions";
-import HasError from "./HasError";
-import Loading from "./Loading";
+import { fetchFromMusicApi } from "../../../redux/actions";
+import HasError from "../../HasError";
+import Loading from "../../Loading";
 import ProtCard from "./ProtCard";
 
 const Pop = ({endPoint}) => {

@@ -1,8 +1,8 @@
 import { Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { CARD_ID } from "../redux/actions";
-import { SPECIFIC_CARD } from "../redux/actions/albumAction";
+import { CARD_ID } from "../../../redux/actions";
+import { SPECIFIC_CARD } from "../../../redux/actions/albumAction";
 
 const ProtCard = ({ song }) => {
   const dispatch = useDispatch();

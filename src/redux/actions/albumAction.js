@@ -2,6 +2,7 @@
 
 export const SPECIFIC_CARD = "SPECIFIC_CARD";
 export const PLAY_ALBUM = "PLAY_ALBUM";
+export const LIKE_SONG = "LIKE_SONG";
 
 export const converter = (sec) => {
   return Math.round(sec / 60) + ":" + (sec % 60);

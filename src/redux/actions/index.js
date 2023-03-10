@@ -64,6 +64,6 @@ export const fetchFromMusicApi = (endPoint) => {
   };
 };
 
-const dispatch = () => ({
-    type: IS_LOADING,
-  })
+// const dispatch = () => ({
+//     type: IS_LOADING,
+//   })

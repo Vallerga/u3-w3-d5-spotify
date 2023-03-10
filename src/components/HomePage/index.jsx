@@ -1,9 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
-import Rock from "./Rock";
-import Pop from "./Pop";
-import HipHop from "./HipHop";
-import CommonHeader from "./CommonHeader";
-import SearchResults from "./SearchResults";
+import Rock from "./children/Rock";
+import Pop from "./children/Pop";
+import HipHop from "./children/HipHop";
+import CommonHeader from "../CommonHeader";
+import SearchResults from "../SearchResults";
 
 const Home = () => {
   return (
